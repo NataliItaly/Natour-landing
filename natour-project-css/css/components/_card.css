@@ -1,0 +1,162 @@
+.card {
+  height: 52rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+
+.card__side {
+  width: 100%;
+  background-color: #ffffff;
+  height: 52rem;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: var(--default-box-shadow);
+  transition: all 0.8s;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card__side--back {
+  transform: rotateY(180deg);
+}
+
+.card__side--back-1 {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-secondary-light),
+    var(--color-secondary-dark)
+  );
+}
+
+.card__side--back-2 {
+  background-image: var(--default-linear-gradient-opac);
+}
+
+.card__side--back-3 {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-tertiary-light),
+    var(--color-tertiary-dark)
+  );
+}
+
+.card:hover .card__side--front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card__side--back {
+  transform: rotateY(0deg);
+}
+
+.card__picture {
+  height: 23rem;
+  background-size: cover;
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.card__picture-1 {
+  background-image: linear-gradient(
+      to right bottom,
+      var(--color-secondary-light),
+      var(--color-secondary-dark)
+    ),
+    url("../../img/nat-5.jpg");
+}
+
+.card__picture-2 {
+  background-image: var(--default-linear-gradient-opac),
+    url("../../img/nat-6.jpg");
+}
+
+.card__picture-3 {
+  background-image: linear-gradient(
+      to right bottom,
+      var(--color-tertiary-light),
+      var(--color-tertiary-dark)
+    ),
+    url("../../img/nat-7.jpg");
+}
+
+.card__title {
+  width: 75%;
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: var(--color-white);
+  position: absolute;
+  top: 12rem;
+  right: 0;
+}
+
+.card__title-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.card__title-span-1 {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(255, 187, 0, 0.85),
+    rgba(255, 119, 46, 0.85)
+  );
+}
+
+.card__title-span-2 {
+  background-image: var(--default-linear-gradient-transparent);
+}
+
+.card__title-span-3 {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(41, 152, 255, 0.869),
+    rgba(85, 67, 250, 0.85)
+  );
+}
+
+.card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid var(--color-gray-light-2);
+}
+
+.call-to-action {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card__price-box {
+    color: var(--color-white );
+}
+
+.card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.card__price-total {
+    font-size: 6rem;
+    font-weight: 100;
+}
